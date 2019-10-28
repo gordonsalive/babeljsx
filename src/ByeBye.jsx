@@ -4,7 +4,7 @@ class ByeBye extends React.Component {
     render() {
         return (
             <div>
-                Bye Bye!
+                Bye Bye!!
             </div>
         );
     }

@@ -29,12 +29,23 @@ class App extends React.Component {
                     </ul>
                 </nav>
                 Experiment!
-                {/* <Switch> */}
-                    {/* Switch  */}
+                 
+                {/*
+                ** <Switch> **
+                    ** Switch !! **
                     <Route exact path="/"  component = {Home}/>
                     <Route path="/hello" component = {HelloWorld}/>
                     <Route path="/bye" component = {ByeBye}/>
-                {/* </Switch> */}
+                ** </Switch> **
+                */}
+                
+                <Switch>
+                    Switch
+                    {/* Switch renders the FIRST match that it finds. */}
+                    <Route path="/hello" component = {HelloWorld}/>
+                    <Route path="/bye" component = {ByeBye}/>
+                    <Route path="/" component = {Home}/>
+                </Switch> 
             </Router>
        );
     }
