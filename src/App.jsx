@@ -3,7 +3,8 @@ import HelloWorld from "./HelloWorld.jsx";
 import ByeBye from "./ByeBye.jsx";
 import Home from "./Home.jsx";
 import {
-    BrowserRouter as Router,
+    // BrowserRouter as Router,
+    HashRouter as Router,
     Switch,
     Route,
     Link
@@ -31,12 +32,10 @@ class App extends React.Component {
                 Experiment!
                  
                 {/*
-                ** <Switch> **
-                    ** Switch !! **
+                    ** without using <Switch> need to use exact path, to prevent multiple sections being rendered **
                     <Route exact path="/"  component = {Home}/>
                     <Route path="/hello" component = {HelloWorld}/>
                     <Route path="/bye" component = {ByeBye}/>
-                ** </Switch> **
                 */}
                 
                 <Switch>
