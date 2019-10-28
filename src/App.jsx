@@ -4,6 +4,9 @@ import ByeBye from "./ByeBye.jsx";
 import Home from "./Home.jsx";
 import {
     // BrowserRouter as Router,
+    // HashRouter will insert a # into the url route, allowing bookmarks and manual typing, 
+    // ...but, this might be incomptible with our hash handling - and isomorphic design would be better,
+    //    see this stack o/f for a good starting point: https://stackoverflow.com/questions/27928372/react-router-urls-dont-work-when-refreshing-or-writing-manually
     HashRouter as Router,
     Switch,
     Route,
