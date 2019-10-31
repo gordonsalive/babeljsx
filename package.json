@@ -8,24 +8,31 @@
     "publish": "webpack-dev-server --output-public-path=/dev/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": "^8.9.1"
+  },
   "author": "Alan Gordon",
   "license": "ISC",
   "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
-    "eslint-config-airbnb-base": "14.0.0",
-    "react-router-dom": "^4.3.1",
     "@babel/core": "7.6.2",
     "@babel/preset-env": "7.6.0",
     "@babel/preset-react": "^7.6.3",
     "babel-loader": "^8.0.6",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.2",
-    "react-router": "4.3.1"
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0"
   },
   "oldDevDependencies": {
     "babel-core": "^6.26.3",
