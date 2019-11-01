@@ -1,4 +1,5 @@
 const path = require('path');
+const bundleConfig = require('./bundle.config.json');
 
 // from good tutorial: https://www.tutorialspoint.com/babeljs/babeljs_working_babel_with_jsx.htm
 
@@ -11,7 +12,8 @@ module.exports = {
         path: path.resolve(__dirname, 'dev'),
         filename: 'main_bundle.js'
     },
-    mode: 'development',
+    // mode instructs webpack how to bundle - for minimum size & max efficiency (production), or for more info and easier development (development)
+    mode: bundleConfig.isProd ? 'production' : 'development',
     module: {
         rules: [
             {
@@ -27,6 +29,7 @@ module.exports = {
         ]
     },
     resolve: {
+        // we need to tell webpack how to look for imported files where we've left the extension off
         extensions: ['.js', '.jsx']
     }
 };
