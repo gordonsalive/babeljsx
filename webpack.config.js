@@ -14,6 +14,10 @@ module.exports = {
     },
     // mode instructs webpack how to bundle - for minimum size & max efficiency (production), or for more info and easier development (development)
     mode: bundleConfig.isProd ? 'production' : 'development',
+
+    // Enable sourcemaps for debugging webpack's output.
+    devtool: bundleConfig.isProd ? '' : 'source-map',
+    
     module: {
         rules: [
             {
@@ -25,6 +29,12 @@ module.exports = {
                     // presets: ['es2015','react']
                     presets: ['@babel/preset-env', '@babel/preset-react']
                 }
+            },
+            // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
+            {
+                enforce: "pre",
+                test: /\.js$/,
+                loader: "source-map-loader"
             }
         ]
     },
