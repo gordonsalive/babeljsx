@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {
     // BrowserRouter as Router,
     // HashRouter will insert a # into the url route, allowing bookmarks and manual typing,
